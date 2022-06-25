@@ -1,4 +1,4 @@
-package tests;
+package tests2;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -12,7 +12,7 @@ import org.testng.annotations.*;
 
 import java.time.Duration;
 
-public class BasicTests {
+public class BasicTests2 {
 
     WebDriver driver;
 
@@ -45,25 +45,31 @@ public class BasicTests {
 
 
 
+
+
     @Test
-    public void verifyTitleTest(){
-
+    public void testLoginWithValidCredentials(){
         driver.get("http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
-        Assert.assertEquals(driver.getTitle(), "Web Orderz Bclsd,dvj");
 
+        driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester", Keys.TAB, "test", Keys.ENTER);
+
+        Assert.assertEquals(driver.getTitle(), "Web Orders");
 
     }
 
 
     @Test
-    public void verifyURLTest(){
+    public void testLoginWithInValidCredentials(){
         driver.get("http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
-        Assert.assertEquals(driver.getCurrentUrl(), "http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
+
+        driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Heloo", Keys.TAB, "bdcnbsgh", Keys.ENTER);
+
+
+        WebElement errorMessage = driver.findElement(By.id("ctl00_MainContent_status"));
+
+        Assert.assertTrue(errorMessage.isDisplayed());
 
     }
-
-
-
 
 
 
