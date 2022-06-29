@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="UI Tests">
+
+<test name="Products">
+
+
+    <classes>
+
+<!--        class names have to be added with its package name if there is one-->
+       <class name="tests.BasicTests">
+
+           <methods>
+               <include name="verifyTitleTest"/>
+               <include name="verifyURLTest"/>
+           </methods>
+
+       </class>
+
+        <class name="tests.ExecutionOrder">
+
+            <methods>
+                <include name="loginTest"/>
+                <include name="signUpTest"/>
+            </methods>
+
+        </class>
+
+        <class name="tests2.BasicTests2">
+
+            <methods>
+                <include name="testLoginWithValidCredentials"/>
+            </methods>
+
+        </class>
+
+
+    </classes>
+
+</test>
+
+
+
+
+
+
+
+
+
+</suite>
+
