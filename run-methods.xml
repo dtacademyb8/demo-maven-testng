@@ -9,9 +9,14 @@
     <classes>
 
 <!--        class names have to be added with its package name if there is one-->
-        <class name="tests.BasicTests"/>
-        <class name="tests.BasicTests3"/>
-        <class name="tests2.BasicTests2"/>
+       <class name="tests.BasicTests">
+
+           <methods>
+               <include name="verifyTitleTest"/>
+               <include name="verifyURLTest"/>
+           </methods>
+
+       </class>
 
     </classes>
 

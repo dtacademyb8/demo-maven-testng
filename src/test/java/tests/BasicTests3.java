@@ -53,8 +53,9 @@ public class BasicTests3 {
 
 
     @Test
-    public void verifyURLTest(){
+    public void verifyURLTest() throws InterruptedException {
         driver.get("http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
+        Thread.sleep(3000);
         Assert.assertEquals(driver.getCurrentUrl(), "http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
 
     }

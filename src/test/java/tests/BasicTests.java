@@ -12,6 +12,8 @@ import org.testng.annotations.*;
 
 import java.time.Duration;
 
+
+
 public class BasicTests {
 
     WebDriver driver;
@@ -46,9 +48,10 @@ public class BasicTests {
 
 
     @Test
-    public void verifyTitleTest(){
+    public void verifyTitleTest() throws InterruptedException {
 
         driver.get("http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
+        Thread.sleep(1000);
         Assert.assertEquals(driver.getTitle(), "Web Orderz Bclsd,dvj");
 
 

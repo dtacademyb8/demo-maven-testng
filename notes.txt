@@ -1,0 +1,35 @@
+
+
+Test Framework - a collection of tools and libraries that are brought together to perform automated testing.
+
+There is no single correct or incorrect way of building a framework but there are general guidelines, design principles and patterns and
+should have common characteristics such as scalability, maintainability/reusability, readablity, robust/fast.
+
+In general, the test automation frameworks can be categorized to TDD and BDD frameworks:
+
+TDD(Test-Driven-Development) Framework - based on TestNG.
+BDD(Behavior-Driven-Development) Framework - based on Junit and Cucumber
+
+
+Main components of the TestNG framework:
+
+- Java - write scripts
+- Selenium - automate the UI tests
+- Maven - automate the build and dependency management process
+- TestNG - configure, assert, run the tests
+- Faker - generate random test data
+- WebDriverManager(bonigarcia) - automate browser driver management
+
+TestNG annotations:
+
+  @Before And @After annotations - >  configuration annotations to perform setup and teardown operations
+  before and after specific items during our test execution
+
+  testng.xml -> a file where we configure how to organize and run our tests
+  It consists of    suite -> test -> class -> method
+
+  Annotation attribute - optional property that can be applied to an Annotation, comes as key value pair. Each annotation supports pre-defined attributes
+    @Test (enabled=true, priority=1)
+
+
+
