@@ -14,34 +14,9 @@ import java.time.Duration;
 
 
 
-public class BasicTests {
-
-    WebDriver driver;
-
-    @BeforeClass
-    public void setupClass(){
-        WebDriverManager.chromedriver().setup();
-    }
+public class BasicTests extends  TestBase{
 
 
-    @AfterClass
-    public void tearDownClass(){
-        System.out.println("Cleanup once after everything is executed in this class");
-    }
-
-
-    @BeforeMethod
-     public void setupMethod(){
-         driver =  new ChromeDriver();
-         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-         driver.manage().window().maximize();
-     }
-
-
-    @AfterMethod
-    public void tearDownMethod(){
-        driver.quit();
-    }
 
 
 

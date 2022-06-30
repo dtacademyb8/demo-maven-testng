@@ -9,34 +9,8 @@ import org.testng.annotations.*;
 
 import java.time.Duration;
 
-public class BasicTests3 {
+public class BasicTests3  extends TestBase{
 
-    WebDriver driver;
-
-    @BeforeClass
-    public void setupClass(){
-        WebDriverManager.chromedriver().setup();
-    }
-
-
-    @AfterClass
-    public void tearDownClass(){
-        System.out.println("Cleanup once after everything is executed in this class");
-    }
-
-
-    @BeforeMethod
-     public void setupMethod(){
-         driver =  new ChromeDriver();
-         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-         driver.manage().window().maximize();
-     }
-
-
-    @AfterMethod
-    public void tearDownMethod(){
-        driver.quit();
-    }
 
 
 

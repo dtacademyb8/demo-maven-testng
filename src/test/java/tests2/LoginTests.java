@@ -1,19 +1,15 @@
 package tests2;
 
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 import tests.TestBase;
 
-import java.time.Duration;
-
-public class BasicTests2 extends TestBase {
+public class LoginTests extends TestBase {
 
 
 
@@ -22,7 +18,8 @@ public class BasicTests2 extends TestBase {
 
 
 
-    @Test
+
+    @Test ()
     public void testLoginWithValidCredentials(){
         driver.get("http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
 
@@ -45,10 +42,5 @@ public class BasicTests2 extends TestBase {
         Assert.assertTrue(errorMessage.isDisplayed());
 
     }
-
-
-
-
-
 
 }

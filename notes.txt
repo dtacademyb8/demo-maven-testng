@@ -32,4 +32,64 @@ TestNG annotations:
     @Test (enabled=true, priority=1)
 
 
+ Interview Question(IQ):  Given a test suite of 500 test cases, how do you run only 5 test cases?
+                          - Use <include> tag in testng.xml file
+                          - Ex:
+                            <class name="tests.BasicTests">
 
+                                      <methods>
+                                          <include name="verifyTitleTest"/>
+                                          <include name="verifyURLTest"/>
+                                      </methods>
+
+                            </class>
+
+                         IQ: Given a test suite of 500 test cases, how do you run all test cases excluding 5 test cases that are flaky?
+                                                   - Use <exclude> tag in testng.xml file
+                                                   - Ex:
+                                                    <class name="tests2.BasicTests2">
+
+                                                                <methods>
+                                                                    <exclude name="testLoginWithValidCredentials"/>
+                                                                </methods>
+
+                                                    </class>
+
+
+            -SDET/QA's are responsible for creating, running, maintaining, of smoke and regression test suites.
+            -Smoke Test - test suite that verifies the essential/critical functionalities are working.
+            -Regression Test - test suite that verifies if the newly added changes didn't break the existing functionalities, usually involves all of your test cases
+
+            IQ: How can you run all the test cases within all the classes in all the packages?
+
+                -Use regular expression (.*) with <package> tag.
+                Ex:
+                     <packages>
+
+
+                         <package name=".*"/>
+
+
+                     </packages>
+
+
+
+            IQ: How can you run all tests cases that starts-with/ends-with/contains a certain String?
+
+               - Use regular expressions within include/exclude tags when indicating the test methods.
+               -Ex:
+                 <class name="tests.BasicTests">
+
+                           <methods>
+                <!--                             ends with Test   -->
+                               <include name=".*Test"/>
+
+                <!--                             starts with login    -->
+                               <include name="login.*"/>
+
+                <!--                             contains login    -->
+                               <include name=".*login.*"/>
+
+                           </methods>
+
+                </class>

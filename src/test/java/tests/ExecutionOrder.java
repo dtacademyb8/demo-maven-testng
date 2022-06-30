@@ -5,8 +5,8 @@ import org.testng.annotations.Test;
 
 public class ExecutionOrder {
 
-    @Test (priority = 1000, enabled = false )
-    public void test1(){
+    @Test (priority = 1000)
+    public void loginTest1(){
         System.out.println("test1");
 
     }
@@ -23,18 +23,18 @@ public class ExecutionOrder {
     }
 
     @Test (priority = 5 )
-    public void b(){
+    public void TC_001_login_ui_positive(){
         System.out.println("b");
     }
 
 
     @Test
-    public void loginTest(){
+    public void loginTest2(){
         System.out.println("loginTest");
     }
 
     @Test (priority = 5 )
-    public void signUpTest(){
+    public void signUpAndloginTest(){
         System.out.println("signUpTest");
     }
 }
