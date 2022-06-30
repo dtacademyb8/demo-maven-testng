@@ -93,3 +93,16 @@ TestNG annotations:
                            </methods>
 
                 </class>
+
+
+
+                IQ: How can you run tests in specific order?
+
+                -Use priority attribute of @Test annotation:
+                 @Test (priority = 2 )
+
+               IQ: How can you create dependencies between tests so that tests are executed in specific order and if one of the tests fail the rest is skipped?
+
+                -Use dependOnMethods attribute of @Test annotation:
+                @Test (dependsOnMethods = {"testLoginWithValidCredentials"})
+

@@ -25,7 +25,7 @@ public class TestBase {
 
     @BeforeMethod
     public void setupMethod(){
-
+        WebDriverManager.edgedriver().setup();
         driver =  new EdgeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();

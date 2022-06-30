@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="UI Tests" time-out="5000">
+
+<test name="Products">
+
+
+    <classes>
+
+<!--        class names have to be added with its package name if there is one-->
+
+        <class name="tests2.TimeOutTest"/>
+
+    </classes>
+
+</test>
+
+
+
+
+
+
+
+
+
+</suite>
+
