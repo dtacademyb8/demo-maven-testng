@@ -22,7 +22,7 @@ public class BasicTests extends  TestBase{
 
 
 
-    @Test
+    @Test (groups = {"homepage", "smoke", "flaky"})
     public void verifyTitleTest() throws InterruptedException {
 
         driver.get("http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
@@ -33,7 +33,7 @@ public class BasicTests extends  TestBase{
     }
 
 
-    @Test
+    @Test (groups =  {"smoke"} )
     public void verifyURLTest(){
         driver.get("http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
         Assert.assertEquals(driver.getCurrentUrl(), "http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");

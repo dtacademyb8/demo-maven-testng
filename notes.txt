@@ -106,3 +106,22 @@ TestNG annotations:
                 -Use dependOnMethods attribute of @Test annotation:
                 @Test (dependsOnMethods = {"testLoginWithValidCredentials"})
 
+
+
+
+            When running group tests, all @Before and @After methods are NOT going to run by default, we need to add alwaysRun=true attribute to make it always run:
+
+            @BeforeMethod (alwaysRun = true)
+
+
+
+
+            IQ: What is the difference between Hard Assertion vs Soft Assertions?
+                What is the difference between Assert vs Verify?
+
+
+
+
+
+
+

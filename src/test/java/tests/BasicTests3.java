@@ -16,7 +16,7 @@ public class BasicTests3  extends TestBase{
 
 
 
-    @Test
+    @Test (groups =  {"smoke"} )
     public void verifyTitleTest(){
 
         driver.get("http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
@@ -26,7 +26,7 @@ public class BasicTests3  extends TestBase{
     }
 
 
-    @Test
+    @Test (groups = {"homepage"})
     public void verifyURLTest() throws InterruptedException {
         driver.get("http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
         Thread.sleep(3000);
