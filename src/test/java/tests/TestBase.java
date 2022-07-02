@@ -12,7 +12,7 @@ import java.time.Duration;
 public class TestBase {
 
     public WebDriver driver;
-    public SoftAssert softAssert;
+
 
 
 //    @BeforeClass
@@ -29,7 +29,7 @@ public class TestBase {
 
     @BeforeMethod (alwaysRun = true)
     public void setupMethod(){
-        softAssert =  new SoftAssert();
+
         WebDriverManager.chromedriver().setup();
         driver =  new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -42,7 +42,7 @@ public class TestBase {
     public void tearDownMethod(){
 
         driver.quit();
-        softAssert.assertAll();
+
     }
 
 }
