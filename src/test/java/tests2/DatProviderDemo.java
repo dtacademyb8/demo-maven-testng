@@ -14,7 +14,7 @@ import utilties.CSVReader;
 public class DatProviderDemo extends TestBase {
 
 
-    @Test (dataProvider = "usernamePassCombo")
+    @Test (dataProvider = "usernamePassCombo", dataProviderClass = DataProviderCollection.class)
 
     public void testLoginWithInValidCredentials(String username, String password){
         driver.get("http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
@@ -29,35 +29,6 @@ public class DatProviderDemo extends TestBase {
     }
 
 
-    @DataProvider (name = "usernamePassCombo")
-     public Object[][] getData(){
 
-        return new Object[][]{
-                {"afa", "dscsjdchvdhs"},
-                {"majd", "sdcdscds"},
-                {"amine", "vfbfdbfdbfd"},
-                {"lara", "cdsc"}
-        };
-     }
-
-
-    @DataProvider (name = "usernamePassComboRandom")
-    public Object[][] getData2(){
-
-        Faker fake = new Faker();
-        return new Object[][]{
-                {fake.name().username(), fake.internet().password()},
-                {fake.name().username(), fake.internet().password()},
-                {fake.name().username(), fake.internet().password()},
-                {fake.name().username(), fake.internet().password()}
-        };
-    }
-
-
-    @DataProvider (name = "usernamePassComboFromFile")
-    public Object[][] getData3(){
-
-        return CSVReader.readFromCSV("src/test/resources/data2.csv");
-    }
 
 }
