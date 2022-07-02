@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="UI Tests">
+
+<test name="Test1">
+
+    <parameter name="USER" value="johndoe"/>
+    <parameter name="PASS" value="blabla"/>
+
+    <classes>
+
+<!--        class names have to be added with its package name if there is one-->
+       <class name="tests2.ParametrizedTests">
+
+
+           <methods>
+               <include name="testLoginWithInValidCredentials"/>
+
+           </methods>
+
+       </class>
+
+
+    </classes>
+
+</test>
+
+
+    <test name="Test2">
+
+        <parameter name="USER" value="barack"/>
+        <parameter name="PASS" value="blabla"/>
+
+        <classes>
+
+            <!--        class names have to be added with its package name if there is one-->
+            <class name="tests2.ParametrizedTests">
+
+
+                <methods>
+                    <include name="testLoginWithInValidCredentials"/>
+
+                </methods>
+
+            </class>
+
+
+        </classes>
+
+    </test>
+
+
+
+
+
+
+
+
+
+</suite>
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="UI Tests">
+
+<test name="Chrome">
+    <parameter name="browser" value="chrome"/>
+
+    <classes>
+<!--        class names have to be added with its package name if there is one-->
+       <class name="tests2.ParametrizedTests2CrossBrowser">
+
+           <methods>
+               <include name="testParamCrossBrowser"/>
+
+           </methods>
+
+       </class>
+
+    </classes>
+</test>
+
+
+    <test name="Firefox">
+        <parameter name="browser" value="firefox"/>
+
+        <classes>
+            <!--        class names have to be added with its package name if there is one-->
+            <class name="tests2.ParametrizedTests2CrossBrowser">
+
+                <methods>
+                    <include name="testParamCrossBrowser"/>
+
+                </methods>
+
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="Edge">
+        <parameter name="browser" value="edge"/>
+
+        <classes>
+            <!--        class names have to be added with its package name if there is one-->
+            <class name="tests2.ParametrizedTests2CrossBrowser">
+
+                <methods>
+                    <include name="testParamCrossBrowser"/>
+
+                </methods>
+
+            </class>
+
+        </classes>
+    </test>
+
+
+
+
+
+
+</suite>
+
