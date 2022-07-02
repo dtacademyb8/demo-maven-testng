@@ -119,8 +119,20 @@ TestNG annotations:
             IQ: What is the difference between Hard Assertion vs Soft Assertions?
                 What is the difference between Assert vs Verify?
 
+                Hard assertions throw the exception and stop the execution right away when assertion fails whereas soft assertions continue the execution and throw the exceptions at the end.
+                TestNG offers SoftAssert class for soft asssertions:
+                Ex:
+                  SoftAssert sa =  new SoftAssert();
+                  sa.assertTrue(true);
+                  sa.assertEquals( "cbdsj", "dhsgc");
+
+                  sa.assertAll();
 
 
+
+
+
+              Data-Driven Testing -  testing technique where the data is fed to your tests through external sources (csv, excel, txt, database)
 
 
 
